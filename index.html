@@ -1,88 +1,238 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="keywords" content="HTMLTutorial, LearnHTML, HTMLCoding, LearnHTML5Online">
-        <meta name="description" contents="Learn to code with interactive tutorials, courses and exercises. Master programming skills in HTML, CSS, JavaScript and more">
-        <title> CODE HUB</title>
-        <link rel="icon"href="code.jpg">
-        <style>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML Tutorial, Learn HTML, HTML Coding, Learn HTML5 Online">
+    <meta name="description" content="Learn to code with interactive tutorials, courses, and exercises. Master programming skills in HTML, CSS, JavaScript, and more.">
+    <title>CODE HUB</title>
+    <link rel="icon" href="code.jpg" type="image/jpeg">
+    <style>
+        :root {
+            --primary-color: #283593;
+            --secondary-color: #42A5F5;
+            --text-color: #FFFFFF;
+            --button-bg: #1A237E;
+            --button-hover-bg: #3949AB;
+            --button-text: #FFFFFF;
+            --footer-bg: #0D47A1;
+        }
+
+        body {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: var(--secondary-color);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        button {
+            background-color: var(--button-bg);
+            color: var(--button-text);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: var(--button-hover-bg);
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-top: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--button-bg);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        p, ul {
+            font-size: 1.2em;
+            line-height: 1.6em;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 40px;
+        }
+
+        footer {
+            background-color: var(--footer-bg);
+            color: var(--text-color);
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .resources img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .whatsapp-icon {
+            vertical-align: middle;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            header {
+                padding: 30px 10px;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            nav {
+                margin-bottom: 10px;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            p, ul {
+                font-size: 1.1em;
+            }
+
             button {
-                background-color: black;
-                color:white;
-                border: none;
-                border-radius: 2px;
-                cursor: pointer;
+                padding: 8px 15px;
+                font-size: 0.9em;
             }
-            body {
-                background-color:#4567B7;
-                color:#FFFFFF;
-                accent-color: #666666;
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.7em;
             }
-        </style>
-    </head>
-        <body>
-            <a href="#section-aboutus"><button> About Us</button></a>
-            <a href="#section-support"><button>Community Support</button></a>
-            <a href="#section-resources"><button>Resources</button></a>
-            <a href="#section-contactus"><button>Contact Us</button></a>
-            <a href="https://wa.me/+2347082763536" target="_blank" title="WHATSAPP"><img src="whatsapp.jpeg" width="30" height="30"></a>
-            <a href="mailto:tonyxg305@gmail.com"><button>Email Us</button></a>    
-        <img src="code.jpg"alt="CODE HUB IMAGE" style="max-width:100%; height:auto;"> 
-        <h2 id="section-aboutus"><big>WELCOME TO CODE HUB</h2></big>
-        <p>
-           <big> Code Hub is a community-driven platform dedicated to empowering individuals with the skills and 
-            knowlegde necessary to succeed in the world of coding. Our mission is to to provide accessible, affordable
-            and comprehensive coding education, bridging the gap between aspiring developers and the ever-evolving tech industry.<br>
-            <p>We were founded by experienced developers and educators, CODE HUB was born out of a shared passion for coding and a desire to make it accessible to everyone.
-                We recognized the need for a supportive community where individuals could learn, grow and connect with like-minded individuals.<br> </p>
-                <p> At CODE HUB, we believe that coding should be fun, engaging and rewarding. Our expert instructors employ a hands-on approach, combining theoretical
-                    foundations with practical applications. Our Curriculum is carefullly crafted to cater to diverse learning styles, ensuring that every student receives a comprehensive education.
-                </p>
-        </p></big>
-        <h2 id="section-courses&programs"><big><u> Courses & Programs</big></h2></u>
-        <p><big> We offer an extensive range of courses and programs tailored to meet the needs of beginners, intermediate learners and advanced developers:
+
+            section {
+                padding: 15px;
+            }
+
+            button {
+                padding: 6px 12px;
+                font-size: 0.85em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to CODE HUB</h1>
+    </header>
+
+    <nav>
+        <a href="#section-aboutus"><button>About Us</button></a>
+        <a href="#section-support"><button>Community Support</button></a>
+        <a href="#section-resources"><button>Resources</button></a>
+        <a href="#section-contactus"><button>Contact Us</button></a>
+        <a href="https://wa.me/+2347082763536" target="_blank" title="WhatsApp">
+            <img src="whatsapp.jpeg" alt="WhatsApp Icon" width="30" height="30" class="whatsapp-icon">
+        </a>
+        <a href="mailto:tonyxg305@gmail.com"><button>Email Us</button></a>
+    </nav>
+
+    <section id="section-aboutus">
+        <h2>About Us</h2>
+        <p>Code Hub is a community-driven platform dedicated to empowering individuals with the skills and knowledge necessary to succeed in coding. Our mission is to provide accessible, affordable, and comprehensive coding education, bridging the gap between aspiring developers and the ever-evolving tech industry.</p>
+        <p>Founded by experienced developers and educators, Code Hub was born out of a shared passion for coding and a desire to make it accessible to everyone. We provide a supportive community where individuals can learn, grow, and connect with like-minded individuals.</p>
+        <p>At Code Hub, we believe that coding should be fun, engaging, and rewarding. Our expert instructors use a hands-on approach, combining theoretical foundations with practical applications. Our curriculum is carefully crafted to cater to diverse learning styles, ensuring a comprehensive education for all students.</p>
+    </section>
+
+    <section id="section-courses">
+        <h2>Courses & Programs</h2>
+        <p>We offer an extensive range of courses and programs tailored to meet the needs of all learners:</p>
         <ul>
-        <li>Web Development:HTML, CSS, JavaScript, React, Angular</li>
-        <li>Programming Fundamentals:Python, Java, C++, Ruby</li>
-        <li>Data Science and Machine Learning: Python, R, Tensorflow</li>
-        <li>Mobile App Development:iOS, Andriod</li>
-        <li>CyberSecurity:Network Security, Cryptography</li>
+            <li>Web Development: HTML, CSS, JavaScript, React, Angular</li>
+            <li>Programming Fundamentals: Python, Java, C++, Ruby</li>
+            <li>Data Science and Machine Learning: Python, R, TensorFlow</li>
+            <li>Mobile App Development: iOS, Android</li>
+            <li>Cybersecurity: Network Security, Cryptography</li>
         </ul>
-        </big></p>
-        <h2 id="section-support"><big><u> Community Support</u></big></h2>
-        <p><big> At CODE HUB, We understand the importance of the community:
+    </section>
+
+    <section id="section-support">
+        <h2>Community Support</h2>
+        <p>At Code Hub, we understand the importance of community:</p>
         <ul>
-        <li>Online Forums:Connect with instructors, peers and alumni </li>
-        <li>Coding Challenges:Particpate in hackathons, coding contests and projects</li>
-        <li>Mentorship Programs:Pair with experienced developers for guidance</li>
+            <li>Online Forums: Connect with instructors, peers, and alumni</li>
+            <li>Coding Challenges: Participate in hackathons, coding contests, and projects</li>
+            <li>Mentorship Programs: Pair with experienced developers for guidance</li>
         </ul>
-        </big></p>
-        <h2 id="section-resources"><big><u>Resources</u></h2>
-        <p>We provide an extensive library of resources:</p>
+    </section>
+
+    <section id="section-resources" class="resources">
+        <h2>Resources</h2>
+        <p>We provide an extensive library of resources, including:</p>
         <ul>
             <li>Video Tutorials</li>
-            <li>Coding Exercises </li>
+            <li>Coding Exercises</li>
             <li>E-books and Guides</li>
             <li>Industry Insights and News</li>
         </ul>
-        <a href="https://chat.whatsapp.com/KwsT6z7PtnkCkKY1tQMYBY" target="_blank"><h2><b><u><button>Join Us</u></b></h2></a></button>
-        <p><big> Embark on your coding journey with CODING HUB:
-            <ul>
-                <li>Signup for a course</li>
-                <li>Explore our courses and programs</li>
-                <li>Connect with our community</li>
-            </ul>
-        </big></p>
-        <h2 id="section-contactus"><u><big>Contact Us</big></u></h2>
+        <a href="https://chat.whatsapp.com/KwsT6z7PtnkCkKY1tQMYBY" target="_blank"><button>Join Us</button></a>
+    </section>
+
+    <section id="section-contactus">
+        <h2>Contact Us</h2>
         <ul>
-            <li>Email:<a href="mailto:tonyxg305@gmail.com" target="_blank">CLICK THE LINK </a></li>
+            <li>Email: <a href="mailto:tonyxg305@gmail.com" target="_blank">Click here to email us</a></li>
             <li>Phone: +2347082763536</li>
         </ul>
-        <hr>
-        <p align="center"><big><b>CODE HUB IS YOUR GATEWAY TO A REWARDING CAREER IN CODING. <br>JOIN OUR COMMUNITY TODAY AND START CODING WAY TO SUCCESS</big></p></b> 
-        <p align="center"> 2024 CODE HUB </p>
-        </body>
-    </head>
+    </section>
+
+    <footer>
+        <p>CODE HUB IS YOUR GATEWAY TO A REWARDING CAREER IN CODING.<br>JOIN OUR COMMUNITY TODAY AND START CODING YOUR WAY TO SUCCESS.</p>
+        <p>© 2024 CODE HUB</p>
+    </footer>
+</body>
+
 </html>
